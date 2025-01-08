@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class PlayerFPS : MonoBehaviour
+public class Playerscript : MonoBehaviour
 {
-    public Camera playerCamera;  // Référence à la caméra du joueur
-    private CharacterController characterController;  // Composant pour gérer les déplacements du joueur
+    public Camera playerCamera;
+    private CharacterController characterController;
 
     public float walkingSpeed = 7.5f;  // Vitesse de marche du joueur
     public float runningSpeed = 15f;  // Vitesse de course du joueur
