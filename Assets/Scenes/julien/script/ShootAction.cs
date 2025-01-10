@@ -25,6 +25,11 @@ public class ShootAction : MonoBehaviour
     //Determine sur quel Layer on peut tirer
     public LayerMask layerMask;
 
+    //Determine l'objet a instancier
+    public GameObject Projectile;
+
+    //Determine le point de depart
+    public GameObject PointDepart;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +56,7 @@ public class ShootAction : MonoBehaviour
 
             print(nextFire);
 
-            //On va lancer un rayon invisible qui simulera les balles du gun
+           //On va lancer un rayon invisible qui simulera les balles du gun
 
             //Creer un vecteur au centre de la vue de la camera
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
