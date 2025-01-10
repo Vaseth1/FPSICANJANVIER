@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7393292478093972725}
   - component: {fileID: 6085534700597848726}
   - component: {fileID: 7304495678394815548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1038061162426765827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2292866009430731015}
   - component: {fileID: 7512798136092255207}
   - component: {fileID: 4184980678506932245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,8 @@ GameObject:
   - component: {fileID: 5964876749427468355}
   - component: {fileID: 7070352276734124016}
   - component: {fileID: 1895091100051507754}
-  m_Layer: 0
+  - component: {fileID: 1705899439431209092}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,3 +351,19 @@ MonoBehaviour:
   jumpSpeed: 8
   rotationSpeed: 3
   rotationXLimit: 45
+--- !u!114 &1705899439431209092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056009779320166259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21935504ff3c814fa02b4a88934bf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitPoint: 10
+  hitPoint: 0
+  isInvulnerable: 0
+  invulnerabiltyTime: 0
