@@ -19,6 +19,9 @@ public class ReceiveDamage : MonoBehaviour
     
     //Temps depuis le dernier degat
     private float timeSinceLastHit = 0.0f;
+
+    //temps avant la mort
+    private float TimeToDie = 3f;
     
     private void Start()
     {
@@ -71,6 +74,8 @@ public class ReceiveDamage : MonoBehaviour
             //SendMessage appellera toutes les methodes "Defeated" de ce GameObject
             //Exemple : "Defeated" est dans MonsterController
             gameObject.SendMessage("Defeated", SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject, TimeToDie);
+            
         }
     }
 }

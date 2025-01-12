@@ -17,16 +17,16 @@ public class PlayerFPS : MonoBehaviour
     //Vitesse de saut
     public float jumpSpeed = 8f;
 
-    //Gravité
+    //Graviter
     float gravity = 20f;
 
-    //Déplacement
+    //Deplacement
     Vector3 moveDirection;
 
     //Marche ou court ?
     private bool isRunning = false;
 
-    //Rotation de la caméra
+    //Rotation de la camera
     float rotationX = 0;
     public float rotationSpeed = 2.0f;
     public float rotationXLimit = 45.0f;
@@ -44,14 +44,14 @@ public class PlayerFPS : MonoBehaviour
     void Update()
     {
         //Calcule les directions
-        //forward = avant/arrière
+        //forward = avant/arriere
         //right = droite/gauche
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         //Est-ce qu'on appuie sur un bouton de direction ?
 
-        // Z = axe arrière/avant
+        // Z = axe arriere/avant
         float speedZ = Input.GetAxis("Vertical");
 
         // X = axe gauche/droite
@@ -90,7 +90,7 @@ public class PlayerFPS : MonoBehaviour
 
 
         //Calcul du mouvement
-        //forward = axe arrière/avant
+        //forward = axe arriere/avant
         //right = axe gauche/droite
         moveDirection = forward * speedZ + right * speedX;
 
@@ -110,8 +110,8 @@ public class PlayerFPS : MonoBehaviour
         //Si le joueur ne touche pas le sol
         if (!characterController.isGrounded)
         {
-            //Applique la gravité * deltaTime
-            //Time.deltaTime = Temps écoulé depuis la dernière frame
+            //Applique la graviter * deltaTime
+            //Time.deltaTime = Temps ecouler depuis la derniere frame
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
@@ -121,19 +121,19 @@ public class PlayerFPS : MonoBehaviour
 
 
 
-        //Rotation de la caméra
+        //Rotation de la camera
 
         //Input.GetAxis("Mouse Y") = mouvement de la souris haut/bas
         //On est en 3D donc applique ("Mouse Y") sur l'axe de rotation X 
         rotationX += -Input.GetAxis("Mouse Y") * rotationSpeed;
 
-        //La rotation haut/bas de la caméra est comprise entre -45 et 45 
+        //La rotation haut/bas de la camera est comprise entre -45 et 45 
         //Mathf.Clamp permet de limiter une valeur
         //On limite rotationX, entre -rotationXLimit et rotationXLimit (-45 et 45)
         rotationX = Mathf.Clamp(rotationX, -rotationXLimit, rotationXLimit);
 
 
-        //Applique la rotation haut/bas sur la caméra
+        //Applique la rotation haut/bas sur la camera
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
 
 
