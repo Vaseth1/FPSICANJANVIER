@@ -56,7 +56,7 @@ public class ShootAction : MonoBehaviour
 
             print(nextFire);
 
-           //On va lancer un rayon invisible qui simulera les balles du gun
+            //On va lancer un rayon invisible qui simulera les balles du gun
 
             //Creer un vecteur au centre de la vue de la camera
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
