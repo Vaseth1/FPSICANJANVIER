@@ -138,7 +138,7 @@ public class MonsterController : MonoBehaviour
     }
  
  
-    //Permet de surveiller l'animation lorsque l'on prend un dégât
+    //Permet de surveiller l'animation lorsque l'on prend un degat
     private void TakingDamage()
     {
  

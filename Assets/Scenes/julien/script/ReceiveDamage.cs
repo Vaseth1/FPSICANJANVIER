@@ -20,9 +20,14 @@ public class ReceiveDamage : MonoBehaviour
     //Temps depuis le dernier degat
     private float timeSinceLastHit = 0.0f;
 
-    // Valeur du score lorsque l'ennemi est éliminé
+    //Compteur de scorring
     public int scoreValue = 0;
-    
+
+    //Determine le score a attaindre pour la victoire
+    public int scoreVictoire = 2;
+
+    //temps avant la mort
+    private float TimeToDie = 3f;
     
     private void Start()
     {
@@ -68,8 +73,6 @@ public class ReceiveDamage : MonoBehaviour
             //SendMessage appellera toutes les methodes "TakeDamage" de ce GameObject
             //Exemple : "TakeDamage" est dans MonsterController
             gameObject.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
-        
-        
         }
         //Sinon
         else
@@ -77,9 +80,13 @@ public class ReceiveDamage : MonoBehaviour
             //SendMessage appellera toutes les methodes "Defeated" de ce GameObject
             //Exemple : "Defeated" est dans MonsterController
             gameObject.SendMessage("Defeated", SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject, TimeToDie);
             scoreValue += 1;
-            if (scoreValue > 2) ;
-
+//            if (scoreValue > scoreVictoire)
+//            {
+//
+//            }
+            
         }
     }
 }
