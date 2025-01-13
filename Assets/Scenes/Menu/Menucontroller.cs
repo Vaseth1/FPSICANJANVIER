@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menucontroller : MonoBehaviour
 {
-    public void ChangeScene(string _scene_valentin)
+    public void ChangeScene(string _scene_julien)
     {
-        SceneManager.LoadScene(_scene_valentin);
+        SceneManager.LoadScene(_scene_julien);
     }
 
     public void Quit()
