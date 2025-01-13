@@ -4,6 +4,8 @@ using UnityEngine;
  
 public class MeleeWeapon : MonoBehaviour
 {
+    private PlayerReceiveDamage playerReceiveDamage;
+
     //Damage que fait l'arme
     public int damage = 1;
  
@@ -13,6 +15,10 @@ public class MeleeWeapon : MonoBehaviour
     //Est-ce que l'arme est en train d'etre utiliser ?
     public bool isAttacking = false;
  
+    void Start()
+    {
+        playerReceiveDamage = FindObjectOfType<PlayerReceiveDamage>();
+    }
  
     public void StartAttack()
     {
@@ -33,8 +39,11 @@ public class MeleeWeapon : MonoBehaviour
         if ((layerMask.value & (1 << other.gameObject.layer)) == 0)
             return;
  
-        //Fait des dommages au GameObject qu'on a toucher
-        other.GetComponent<ReceiveDamage>().GetDamage(damage);
+            //Fait des dommages au GameObject qu'on a toucher
+            if (playerReceiveDamage != null)
+            {
+                playerReceiveDamage.AddDamage(damage);
+            }
  
     }
 }

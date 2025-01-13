@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/valentin/scene_valentin.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/julien/scene julien.unity
+    path: Assets/Scenes/julien/scene_julien.unity
     guid: 12e285dfeda1b994eab8313f647d9549
   m_configObjects: {}

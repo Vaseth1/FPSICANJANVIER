@@ -23,9 +23,6 @@ public class ReceiveDamage : MonoBehaviour
     //Compteur de scorring
     public int scoreValue = 0;
 
-    //Determine le score a attaindre pour la victoire
-    public int scoreVictoire = 2;
-
     //temps avant la mort
     private float TimeToDie = 3f;
     
@@ -81,12 +78,7 @@ public class ReceiveDamage : MonoBehaviour
             //Exemple : "Defeated" est dans MonsterController
             gameObject.SendMessage("Defeated", SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject, TimeToDie);
-            scoreValue += 1;
-//            if (scoreValue > scoreVictoire)
-//            {
-//
-//            }
-            
+            UIManager.instance.AddPoint();    
         }
     }
 }

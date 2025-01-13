@@ -33,7 +33,7 @@ public class Gun : MonoBehaviour
             //temps du prochain tir = temps total ecouler + temps qu'il faut attendre
             nextFire = Time.time + fireRate;
 
-            print(nextFire);
+            //print(nextFire);
 
             //Instancie la balle
             //ajoute une force * puissance

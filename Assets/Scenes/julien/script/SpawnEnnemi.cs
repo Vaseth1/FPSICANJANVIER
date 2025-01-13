@@ -43,7 +43,7 @@ public class SpawnEnnemi : MonoBehaviour
     {
         //Determine la valeur entre le spawn et le joueur
         Distance = (SpawnPoint.position - Player.position).magnitude;
-        Debug.Log(Distance);
+        //Debug.Log(Distance);
         
         if (Distance < distanceSpawn && compte < MaxSpawn)
         {
